@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "manage",
+			"path": ".."
+		},
+		{
+			"name": "svg",
+			"path": "../../svg"
+		},
+		{
+			"name": "oop.js",
+			"path": "../../oop.js"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "oop.js"
+	}
+}

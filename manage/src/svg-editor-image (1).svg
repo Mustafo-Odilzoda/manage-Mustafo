@@ -1,0 +1,17 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_2_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m20.932665,189.19493c455.327413,-13.449891 150.847194,-80.508334 79.660878,-55.08465" opacity="0.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+ </g>
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-0.065422" x="-1"/>
+  <path stroke="#000" filter="url(#svg_2_blur)" id="svg_2" d="m0.23734,167.62836c18.11587,-86.32964 91.90489,-57.79334 105.54278,-51.01369c13.63789,6.77965 56.50589,67.22624 91.9644,51.97202c35.45849,-15.25421 24.14032,-67.46384 96.87572,-64.92147c72.73539,2.54238 69.17509,63.89186 117.36229,72.36642c48.18719,8.47456 93.6729,-55.41729 103.67401,-63.0444c10.00112,-7.6271 44.3406,-11.61094 64.01674,5.93383" stroke-width="1.5" fill="#fff"/>
+ </g>
+</svg>
