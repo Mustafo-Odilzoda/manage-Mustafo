@@ -1,393 +1,423 @@
 <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
-<!DOCTYPE html>
-<html lang="en">
+
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/dist/output.css">
-    <link rel="stylesheet" href="style-button.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/dist/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-[url('/src/img/bg-tablet-pattern.svg')]">
+<body>
+	<!-- Navbar -->
+	<div class="relative container mx-auto p-6">
+		<!-- Header container -->
+		<header class="flex items-center justify-between">
+			<!-- Logo -->
+			<div class="pt-2">
+				<img src="img/logo.svg" alt="" />
+			</div>
+			<!-- Menu Items -->
+			<div class="hidden space-x-6 md:flex">
+				<a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
+				<a href="#" class="hover:text-darkGrayishBlue">Product</a>
+				<a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+				<a href="#" class="hover:text-darkGrayishBlue">Careers</a>
+				<a href="#" class="hover:text-darkGrayishBlue">Community</a>
+			</div>
+			<!-- Button -->
+			<a href="#"
+				class="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get
+				Started</a>
 
-    <!-- <p class="text-brightRed">Test</p> -->
-    <!-- navbar -->
-    <nav class=" relative container mx-auto p-6">
-        <!-- header container -->
-        <header class="flex items-center justify-between">
-            <!-- logo -->
-            <div class="pt-2">
-                <img src="img/logo.svg" alt="">
-            </div>
+			<!-- Hamburger Icon -->
+			<button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+				<span class="hamburger-top"></span>
+				<span class="hamburger-middle"></span>
+				<span class="hamburger-bottom"></span>
+			</button>
+		</header>
 
-            <!-- menu items -->
-            <div class="hidden space-x-6 md:flex">
-                <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
-                <a href="Blog.html" class="hover:text-darkGrayishBlue">Product</a>
-                <a href="#" class="hover:text-darkGrayishBlue">About us</a>
-                <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
-                <a href="#" class="hover:text-darkGrayishBlue">Comunity</a>
-            </div>
-            <!-- button -->
-            <a href="#"
-                class="hidden md:block p-3 pt-2 text-white bg-brightRed rounded-full self-baseline hover:bg-brightRedLight">
-                Get Standart
-            </a>
-
-            <!-- Hamburger icon -->
-            <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
-            </button>
-
-        </header>
-
-        <!-- Mobail menu -->
-        <div class="md:hidden">
-            <div id="menu"
-                class="absolute flex-col items-center hidden left-6 right-6 self-end py-8 mt-10 space-y-6 sm:w-auto font-bold bg-white sm:self-center drop-shadow-md">
-                <a href="#">Pricing</a>
-                <a href="">Product</a>
-                <a href="Blog.html">About us</a>
-                <a href="#">Careers</a>
-                <a href="#">Comunity</a>
-            </div>
-        </div>
-    </nav>
-
-    <section id="hero">
-        <!-- flex container -->
-        <div class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
-
-            <!-- Left item -->
-            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
-                <h1 class="md:text-5xl font-black bg-slate-50 sm:text-3xl">Bring everyone <br> togather to
-                    bulid <br> better products</h1>
-                <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team
-                    goals in view</p>
-                <!-- Get started -->
-                <div class="flex justify-center md:justify-start">
-                    <button class="sketch-button">Get started 2</button>
-                </div>
-            </div>
-
-            <!-- Image -->
-            <div class="md:w-1/2">
-                <img src="/src/img/illustration-intro.svg" alt="">
-            </div>
-        </div>
-    </section>
+		<!-- Mobile Menu -->
+		<div class="md:hidden">
+			<div id="menu"
+				class="absolute flex-col items-center left-6 right-6 hidden self-end py-8 mt-10 space-y-6 sm:w-auto font-bold bg-white sm:self-center drop-shadow-md">
+				<a href="#">Pricing</a>
+				<a href="#">Product</a>
+				<a href="#">About Us</a>
+				<a href="#">Careers</a>
+				<a href="#">Community</a>
+			</div>
+		</div>
+	</div>
 
 
-    <!-- features -->
-    <section id="">
-        <!-- Feadures container -->
-        <div class="container flex flex-col md:flex-row px-4 mx-auto mt-10 space-y-12 md:space-y-0">
-            <!-- Левая колонка -->
-            <div class="flex flex-col space-y-12 md:w-1/2">
-                <h2 class="max-w-md text-center md:text-left text-4xl font-bold">
-                    Whats different about manage?
-                </h2>
-                <p class="max-w-md text-center text-darkGrayishBlue md:text-left">
-                    Manage provides all the functionality your team needs, without the complexity. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Cum, excepturi?
-                </p>
-            </div><!-- Левая колонка -->
 
-            <!-- namber list -->
-            <div class="flex flex-col md:w-1/2 space-y-8">
-                <!-- list item 1 -->
-                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
-                    <!-- heding -->
-                    <div class="rounded-full bg-brightRedSupLight  md:bg-transparent">
-                        <!-- (01) -->
-                        <div class="flex items-center space-x-2">
-                            <div class="px-4 rounded-full md:py-1 bg-brightRed">
-                                01
-                            </div>
-                            <!-- отоброжение на моб версии -->
-                            <h3 class="text-lg font-bold md:mb-4 md:hidden">
-                                Track company wide progress
-                            </h3>
-                        </div>
-                    </div><!-- heding -->
 
-                    <!-- text -->
-                    <div>
-                        <!-- отоброжение на комп версии -->
-                        <h3 class="text-lg font-bold mb-4 hidden md:block">
-                            Track company wide progress
-                        </h3>
-                        <p class="text-darkGrayishBlue">
-                            See how your day to day tasks fit info the wider vision. Go from tracking progress at the
-                            milestone level all the way done to the smallest of details. Never lose sight of the bigger
-                            picture again.
-                        </p>
-                    </div><!-- text -->
 
-                </div><!-- list item 1 -->
 
-                <!-- list item 2 -->
-                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
-                    <!-- heding -->
-                    <div class="rounded-full bg-brightRedSupLight  md:bg-transparent">
-                        <!-- (02) -->
-                        <div class="flex items-center space-x-2">
-                            <div class="px-4 rounded-full md:py-1 bg-brightRed">
-                                02
-                            </div>
-                            <!-- отоброжение на моб версии -->
-                            <h3 class="text-lg font-bold md:mb-4 md:hidden">
-                                Advanced built-in reports
-                            </h3>
-                        </div>
-                    </div><!-- heding -->
+	<section id="hero">
+		<!-- Flex Container -->
+		<div class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+			<!-- Left item -->
+			<div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+				<h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
+					Bring everyone together to build better products
+				</h1>
+				<p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+					Manage makes it simple for software teams to plan
+					day-to-day tasks while keeping the larger team goals in
+					view.
+				</p>
+				<div class="flex justify-center md:justify-start">
+					<a href="#"
+						class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get
+						Started</a>
+				</div>
+			</div>
+			<!-- Image -->
+			<div class="md:w-1/2">
+				<img src="img/illustration-intro.svg" alt="" />
+			</div>
+		</div>
+	</section>
 
-                    <!-- text -->
-                    <div>
-                        <!-- отоброжение на комп версии -->
-                        <h3 class="text-lg font-bold mb-4 hidden md:block">
-                            Advanced built-in reports
-                        </h3>
-                        <p class="text-darkGrayishBlue">
-                            Set internal delivery estimates and track progress toward company goals. Our customisable
-                            dashboard helps you build out the reports you need to keep key stakeholders informed.
-                        </p>
-                    </div><!-- text -->
 
-                </div><!-- list item 2 -->
+	<!-- Урок 30 секция Features & Testimonials -->
 
-                <!-- list item 3 -->
-                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
-                    <!-- heding -->
-                    <div class="rounded-full bg-brightRedSupLight  md:bg-transparent">
-                        <!-- (03) -->
-                        <div class="flex items-center space-x-2">
-                            <div class="px-4 rounded-full md:py-1 bg-brightRed">
-                                03
-                            </div>
-                            <!-- отоброжение на моб версии -->
-                            <h3 class="text-lg font-bold md:mb-4 md:hidden">
-                                Everything you need in one place
-                            </h3>
-                        </div>
-                    </div><!-- heding -->
+	<section id="features">
+		<!-- Features container -->
+		<div class="container flex flex-col md:flex-row px-4 mx-auto mt-10 space-y-12 md:space-y-0 ">
+			<!-- What's Different -->
+			<div class="flex flex-col space-y-12 md:w-1/2">
+				<h2 class="max-w-md text-center md:text-left text-4xl font-bold  ">
+					What's different about Manage?
+				</h2>
+				<p class="max-w-md text-center  text-darkGrayishBlue md:text-left">
+					Manage provides all the functionality your team needs,
+					without the complexity. Our software is tailor-made for
+					modern digital product teams.
+				</p>
+			</div> <!-- //What's Diff -->
 
-                    <!-- text -->
-                    <div>
-                        <!-- отоброжение на комп версии -->
-                        <h3 class="text-lg font-bold mb-4 hidden md:block">
-                            Everything you need in one place
-                        </h3>
-                        <p class="text-darkGrayishBlue">
-                            Stop jumping from one service to another to communicate, store files, track tasks and share
-                            documents. Manage offers an all-in-one team productivity solution.
-                        </p>
-                    </div><!-- text -->
 
-                </div><!-- list item 3 -->
-            </div><!-- namber list -->
+			<!-- Numbered List -->
+			<div class="flex flex-col space-y-8 md:w-1/2">
+				<!-- List Item 1 -->
+				<div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
+					<!-- Heading -->
+					<div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+						<!-- ( 01 ) -->
+						<div class="flex items-center space-x-2">
 
-        </div><!-- Feadures container -->
-        <!-- <button class="sketch-button">Get started</button> -->
-    </section>
-    <!-- reviews -->
-    <section id="testimonials">
-        <!-- general testimon container -->
-        <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
-            <!-- Heading -->
-            <h2 class="text-4xl font-bold text-center">
-                What people says about us
-            </h2>
-            <!-- Testimons 1-3 container -->
-            <div class="flex flex-col md:flex-row mt-24 space-y-10 md:space-x-6">
+							<div class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed">
+								01
+							</div>
 
-                <!-- Testim 1 -->
-                <div
-                    class="container flex flex-col items-center mt-9 p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3">
-                    <img src="img/avatar-anisha.png" class="w-16 -mt-10">
-                    <h5 class="text-lg font-bold ">Anisha Li</h5>
-                    <p class="text-sm text-darkGrayishBlue">"Manage has supercharged our teams workflow. the ability to
-                        maintain
-                        on largermilestones at all times keeps everyone motivated."</p>
-                </div>
+							<!-- позже   -->
+							<h3 class="text-lg font-bold md:mb-4 md:hidden">
+								<!-- text-lg можно убрать -->
+								==MOBILE== Track company-wide progress
+							</h3>
+							<!-- позже   -->
 
-                <!-- Testim 2 -->
-                <div class="container flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3">
-                    <img src="img/avatar-ali.png" class="w-16 -mt-14 ">
-                    <h5 class="text-lg font-bold ">Ali Bravo</h5>
-                    <p class="text-sm text-darkGrayishBlue">"Manage has supercharged our teams workflow. the ability to
-                        maintain
-                        on largermilestones at all times keeps everyone motivated."</p>
-                </div>
+						</div> <!-- ( 01 ) -->
 
-                <!-- Testim 3 -->
-                <div class="container flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3">
-                    <img src="img/avatar-richard.png" class="w-16 -mt-14 ">
-                    <h5 class="text-lg font-bold ">Richard Wates</h5>
-                    <p class="text-sm text-darkGrayishBlue">"Manage has supercharged our teams workflow. the ability to
-                        maintain
-                        on largermilestones at all times keeps everyone motivated."</p>
-                </div>
+					</div>
 
-            </div><!-- Testimons 1-3 container -->
+					<div>
+						<h3 class="text-lg font-bold mb-4 hidden  md:block">
+							==md:== Track company-wide progress
+						</h3>
+						<p class="text-darkGrayishBlue">
+							See how your day-to-day tasks fit into the wider
+							vision. Go from tracking progress at the
+							milestone level all the way done to the smallest
+							of details. Never lose sight of the bigger
+							picture again.
+						</p>
+					</div>
+				</div> <!-- //Item 1 -->
 
-            <!-- кнопку вставляем перед последним закр. div  -->
-            <!-- Button -->
-            <div class="my-16">
-                <a href="#"
-                    class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get
-                    Started</a>
-            </div>
 
-        </div> <!-- general testimon container -->
-    </section>
 
-    <!-- секция с оранджевой полоской -->
-    <section id="cta" class="bg-brightRed">
-        <!-- flex container -->
-        <div
-            class="container flex flex-col md:flex-row items-center justify-between mx-auto px-6 py-24 md:py-12 space-y-12 md:space-y-0">
-            <h2 class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
-                Simplify how your tema works today</h2>
-            <!-- button -->
-            <div class="">
-                <a href="#"
-                    class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-3xl self-baseline hover:bg-gray-900">Check
-                    it</a>
-            </div>
-        </div>
-    </section>
-    </div><!-- general testimon container -->
-    </section><!-- reviews -->
-    <!-- секция faq -->
-    <div id="faq" class="bg-white py-6 sm:py-8 lg:py-12">
-        <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-            <!-- main text -->
-            <div class="mb-10 md:mb-16">
-                <h2 class="text-darkBlue text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Frequntly Asked
-                    Quastions</h2>
-                <p class="max-w-screen-md text-darkGrayishBlue md:text-lg text-center mx-auto">This is a section also
-                    known as placeholder text. Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-            </div>
-            <!-- text end -->
+				<!-- List Item 2 -->
+				<div class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+					<!-- Heading -->
+					<div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+						<div class="flex items-center space-x-2">
+							<div class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed">
+								02
+							</div>
+							<h3 class="text-base font-bold md:mb-4 md:hidden">
+								Advanced built-in reports
+							</h3>
+						</div>
+					</div>
 
-            <!-- fan quastions 1-4 -->
-            <div class="flex flex-col max-w-screen-sm border-t mx-auto">
-                <!-- остальные ответы -->
-                <!-- quastions 1 -->
-                <div class="border-b">
-                    <details>
-                        <summary
-                            class="flex justify-between text-black hover:text-darkGrayishBlue active:text-darkGrayishBlue cursor-pointer gap-2 py-4">
-                            <span class="md:text-lg font-semibold transition duration-100">Lorem ipsum dolor sit
-                                amet.</span>
-                            <!-- стрелочка svg -->
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-                                    stroke="currentColor" fill="none">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="text-gray-700 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                            porro illo voluptate numquam consequatur soluta qui earum rerum, veritatis dolor explicabo
-                            eaque voluptates nisi ea quos dolorem fuga magnam molestias?</p>
+					<div>
+						<h3 class="hidden mb-4 text-lg font-bold md:block">
+							Advanced built-in reports
+						</h3>
+						<p class="text-darkGrayishBlue">
+							Set internal delivery estimates and track
+							progress toward company goals. Our customisable
+							dashboard helps you build out the reports you
+							need to keep key stakeholders informed.
+						</p>
+					</div>
+				</div>
 
-                    </details>
-                </div>
+				<!-- List Item 3 -->
+				<div class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+					<!-- Heading -->
+					<div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+						<div class="flex items-center space-x-2">
+							<div class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed">
+								03
+							</div>
+							<h3 class="text-base font-bold md:mb-4 md:hidden">
+								Everything you need in one place
+							</h3>
+						</div>
+					</div>
 
-                <!-- quastions 2 -->
-                <div class="border-b">
-                    <details>
-                        <summary
-                            class="flex justify-between text-black hover:text-darkGrayishBlue active:text-darkGrayishBlue cursor-pointer gap-2 py-4">
-                            <span class="md:text-lg font-semibold transition duration-100">Lorem ipsum dolor sit amet.</span>
-                            <!-- стрелочка svg -->
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-                                    stroke="currentColor" fill="none">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="text-gray-700 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                            porro illo voluptate numquam consequatur soluta qui earum rerum, veritatis dolor explicabo
-                            eaque voluptates nisi ea quos dolorem fuga magnam molestias?</p>
+					<div>
+						<h3 class="hidden mb-4 text-lg font-bold md:block">
+							Everything you need in one place
+						</h3>
+						<p class="text-darkGrayishBlue">
+							Stop jumping from one service to another to
+							communicate, store files, track tasks and share
+							documents. Manage offers an all-in-one team
+							productivity solution.
+						</p>
+					</div>
+				</div>
+			</div><!-- //Numb. List -->
 
-                    </details>
-                </div>
+		</div><!-- Features container -->
+	</section>
 
-                <!-- quastions 3 -->
-                <div class="border-b">
-                    <details>
-                        <summary
-                            class="flex justify-between text-black hover:text-darkGrayishBlue active:text-darkGrayishBlue cursor-pointer gap-2 py-4">
-                            <span class="md:text-lg font-semibold transition duration-100">Lorem ipsum dolor sit
-                                amet.</span>
-                            <!-- стрелочка svg -->
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-                                    stroke="currentColor" fill="none">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="text-gray-700 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                            porro illo voluptate numquam consequatur soluta qui earum rerum, veritatis dolor explicabo
-                            eaque voluptates nisi ea quos dolorem fuga magnam molestias?</p>
 
-                    </details>
-                </div>
+	<!-- Урок 30.2  -->
 
-                <!-- quastions 4 -->
-                <div class="border-b">
-                    <details>
-                        <summary
-                            class="flex justify-between text-black hover:text-darkGrayishBlue active:text-darkGrayishBlue cursor-pointer gap-2 py-4">
-                            <span class="md:text-lg font-semibold transition duration-100">Lorem ipsum dolor sit
-                                amet.</span>
-                            <!-- стрелочка svg -->
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-                                    stroke="currentColor" fill="none">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="text-gray-700 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                            porro illo voluptate numquam consequatur soluta qui earum rerum, veritatis dolor explicabo
-                            eaque voluptates nisi ea quos dolorem fuga magnam molestias?</p>
+	<!-- секция отзывов  -->
+	<!-- Testimonials -->
+	<section id="testimonials">
+		<!-- general testimon container -->
+		<div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+			<!-- Heading -->
+			<h2 class="text-4xl font-bold text-center">
+				What's Different About Manage?
+			</h2>
+			<!-- Testimonials Container -->
+			<div class="flex flex-col mt-24 md:flex-row md:space-x-6 space-y-8">
+				<!-- ***сюда test1, 2, 3 *** -->
+				<!-- Testimonial 1 -->
+				<div class="flex flex-col items-center p-6 space-y-6 mt-8 rounded-lg bg-veryLightGray md:w-1/3">
+					<img src="img/avatar-anisha.png" class="w-16 -mt-14" alt="" />
+					<h5 class="text-lg font-bold">Anisha Li</h5>
+					<p class="text-sm text-darkGrayishBlue">
+						“Manage has supercharged our team’s workflow. The
+						ability to maintain visibility on larger milestones
+						at all times keeps everyone motivated.”
+					</p>
+				</div>
 
-                    </details>
-                </div>
-            </div><!-- q1-4 -->
 
-            <section class="svg-container">
-                <svg id="svg_10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 600">
-                    <path id="svg_1" y="21.813416" x="207.843632" id="svg_1"
-                        d="m6.119733,165.667571c46.34609,-86.32964 235.121599,-57.79334 270.011608,-51.01369c34.89001,6.77965 144.559829,67.22624 235.273844,51.97202c90.713963,-15.25421 61.758527,-67.46384 247.838544,-64.92147c186.079991,2.54238 176.971625,63.89186 300.24963,72.36642c123.277979,8.47456 146.787373,-12.560051 210.468679,-63.0444c63.681306,-50.484348 206.294543,-11.61094 225.679845,80.933997" 
-                        stroke="transparent" fill="none"  />
-                        
-                        <text class="text" fill="black">
-                            <textPath class="text-center justify-center  " href="#svg_1">
-                                Я front-end разработчик.
-                            </textPath>
-                        </text>
-                </svg>
-            </section>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+				<!-- Testimonial 2 -->
+				<div class=" flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray  md:w-1/3">
+					<img src="img/avatar-ali.png" class="w-16 -mt-14" alt="" />
+					<h5 class="text-lg font-bold">Ali Bravo</h5>
+					<p class="text-sm text-darkGrayishBlue">
+						“We have been able to cancel so many other
+						subscriptions since using Manage. There is no more
+						cross-channel confusion and everyone is much more
+						focused.”
+					</p>
+				</div>
+
+				<!-- Testimonial 3 -->
+				<div class=" flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray  md:w-1/3">
+					<img src="img/avatar-richard.png" class="w-16 -mt-14" alt="" />
+					<h5 class="text-lg font-bold">Richard Watts</h5>
+					<p class="text-sm text-darkGrayishBlue">
+						“Manage has supercharged our team’s workflow. The
+						ability to maintain visibility on larger milestones
+						at all times keeps everyone motivated.”
+					</p>
+				</div>
+
+			</div>
+
+
+
+			<!-- кнопку вставляем перед последним закр. div  -->
+			<!-- Button -->
+			<div class="my-16">
+				<a href="#"
+					class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get
+					Started</a>
+			</div>
+
+		</div> <!-- general testimon container -->
+	</section>
+
+
+	<!--  Урок 30-2  -->
+	<!-- Секция оранжевой полоски   -->
+
+	<section id="cta" class="bg-brightRed">
+		<!-- Flex Container -->
+		<div
+			class="container flex flex-col md:flex-row items-center justify-between mx-auto px-6 py-24 md:py-12 space-y-12  md:space-y-0">
+			<!-- Heading -->
+			<h2 class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
+				Simplify how your team works today
+			</h2>
+			<!-- Button -->
+			<div>
+				<a href="#"
+					class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900">Get
+					Started</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Секция FAQ -->
+	<div id="faq" class="bg-white py-6 sm:py-8 lg:py-12">
+		<div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+			<!-- main text  -->
+			<div class="mb-10 md:mb-16">
+				<h2 class="text-darkBlue text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6"> Frequently Asked
+					Quastions</h2>
+
+				<p class="max-w-screen-md text-darkGrayishBlue md:text-lg text-center mx-auto">
+					This is a section also known as placeholder text. It shares some info about most common
+					quastions
+				</p>
+			</div>
+			<!-- text end  -->
+
+			<!-- faq questions 1-4  -->
+			<div class="flex flex-col max-w-screen-sm border-t mx-auto">
+				<!-- сюда вставляем ответы  -->
+				<!-- question 1- start -->
+				<div class="border-b">
+					<details>
+						<summary
+							class="flex justify-between text-black hover:text-darkGrayishBlue active:text-darkGrayishBlue cursor-pointer gap-2 py-4">
+							<span class="md:text-lg font-semibold transition duration-100">How does the product
+								work?</span>
+
+							<!-- стрелочка SVG  -->
+							<span class="">
+								<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+									stroke="currentColor" fill="none">
+
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+										d="M19 9l-7 7-7-7" />
+								</svg>
+							</span>
+
+						</summary>
+
+						<p class=" text-gray-700 mb-4">
+							This is a section of some simple filler text, also
+							known as placeholder text. It shares some
+							characteristics of a real written text but is random
+							or otherwise generated. It may be used to display a
+							sample of fonts or generate text for testing.
+						</p>
+					</details>
+				</div><!-- question 1 -->
+
+			</div>
+		</div> <!--faq 1-4 -->
+
+
+
+		<footer class="bg-veryDarkBlue ">
+			<!-- flex container  -->
+			<div
+				class="container flex flex-col-reverse md:flex-row justify-between px-6 py-10 mx-auto space-y-8 md:space-y-0">
+				<!-- Logo links container  -->
+				<div
+					class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
+					<!-- copyright -->
+					<div class="mx-auto my-6 text-center text-white md:hidden">
+						Copyright &copy; 2023, All Rights Reserved
+					</div>
+					<!-- Logo  -->
+					<div class="">
+						<img src="img/logo-white.svg" class="h-8" />
+					</div>
+					<!-- Social links  -->
+					<div class="flex justify-center space-x-4">
+						<!-- Link fb  -->
+						<a href="#">
+							<img src="img/icon-facebook.svg" class="h-8" />
+						</a>
+						<!-- Link youtube  -->
+						<a href="#">
+							<img src="img/icon-youtube.svg" class="h-8" />
+						</a>
+						<!-- Link twit  -->
+						<a href="#">
+							<img src="img/icon-twitter.svg" class="h-8" />
+						</a>
+						<!-- Link pinterest  -->
+						<a href="#">
+							<img src="img/icon-pinterest.svg" class="h-8" />
+						</a>
+						<!-- Link insta  -->
+						<a href="#">
+							<img src="img/icon-instagram.svg" class="h-8" />
+						</a>
+					</div>
+				</div>
+
+				<!-- List container  -->
+				<div class="flex justify-around space-x-32">
+					<div class="flex flex-col space-y-3 text-white">
+						<a href="#" class="hover:text-brightRed">Home</a>
+						<a href="#" class="hover:text-brightRed">Pricing</a>
+						<a href="#" class="hover:text-brightRed">Products</a>
+						<a href="#" class="hover:text-brightRed">About</a>
+					</div>
+					<div class="flex flex-col space-y-3 text-white">
+						<a href="#" class="hover:text-brightRed">Careers</a>
+						<a href="#" class="hover:text-brightRed">Comunity</a>
+						<a href="#" class="hover:text-brightRed">Privacy Policy</a>
+					</div>
+				</div>
+				<!-- Input container  -->
+				<!-- Input Container -->
+				<div class="flex flex-col justify-between">
+					<form>
+						<div class="flex space-x-3">
+							<input type="text" class="flex-1 px-4 rounded-full focus:outline-none"
+								placeholder="Updated in your inbox" />
+							<button
+								class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">
+								Go
+							</button>
+						</div>
+					</form>
+					<div class="hidden text-white md:block">
+						Copyright &copy; 2022, All Rights Reserved
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
